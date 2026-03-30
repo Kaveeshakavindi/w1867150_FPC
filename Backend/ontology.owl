@@ -1,0 +1,484 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/kaveesha/ontologies/2025/11/llm_hallucination"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/kaveesha/ontologies/2025/11/llm_hallucination">
+    <Prefix name="" IRI="http://www.semanticweb.org/kaveesha/ontologies/2025/11/llm_hallucination/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Claim"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CounterEvidence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Credible"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EvidenceType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#False"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Greenwashing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GreenwashingStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Judgment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Misleading"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NoEvidence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NotGreenwashing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SupportiveEvidence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Unsupported"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contradictedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEvidenceType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGreenwashingStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasJudgment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#lacksEvidence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#supportedBy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#claim1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#claim2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#claim3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#credibleJudgment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#evidence1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#evidence2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#evidence3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#falseJudgment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#misleadingJudgment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#unsupportedJudgment"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#CounterEvidence"/>
+        <Class IRI="#EvidenceType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Credible"/>
+        <Class IRI="#Judgment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#False"/>
+        <Class IRI="#Judgment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Greenwashing"/>
+        <Class IRI="#GreenwashingStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Misleading"/>
+        <Class IRI="#Judgment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NoEvidence"/>
+        <Class IRI="#EvidenceType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NotGreenwashing"/>
+        <Class IRI="#GreenwashingStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SupportiveEvidence"/>
+        <Class IRI="#EvidenceType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Unsupported"/>
+        <Class IRI="#Judgment"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Claim"/>
+        <NamedIndividual IRI="#claim1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Claim"/>
+        <NamedIndividual IRI="#claim2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Claim"/>
+        <NamedIndividual IRI="#claim3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Credible"/>
+        <NamedIndividual IRI="#credibleJudgment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CounterEvidence"/>
+        <NamedIndividual IRI="#evidence1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SupportiveEvidence"/>
+        <NamedIndividual IRI="#evidence2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CounterEvidence"/>
+        <NamedIndividual IRI="#evidence3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#False"/>
+        <NamedIndividual IRI="#falseJudgment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Misleading"/>
+        <NamedIndividual IRI="#misleadingJudgment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unsupported"/>
+        <NamedIndividual IRI="#unsupportedJudgment"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contradictedBy"/>
+        <NamedIndividual IRI="#claim1"/>
+        <NamedIndividual IRI="#evidence1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#supportedBy"/>
+        <NamedIndividual IRI="#claim2"/>
+        <NamedIndividual IRI="#evidence2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#supportedBy"/>
+        <NamedIndividual IRI="#claim3"/>
+        <NamedIndividual IRI="#evidence3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#contradictedBy"/>
+        <Class IRI="#Claim"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasEvidenceType"/>
+        <Class IRI="#Claim"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGreenwashingStatus"/>
+        <Class IRI="#Credible"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGreenwashingStatus"/>
+        <Class IRI="#False"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGreenwashingStatus"/>
+        <Class IRI="#Misleading"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasJudgment"/>
+        <Class IRI="#Claim"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#lacksEvidence"/>
+        <Class IRI="#Claim"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#supportedBy"/>
+        <Class IRI="#Claim"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contradictedBy"/>
+        <Class IRI="#CounterEvidence"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasEvidenceType"/>
+        <Class IRI="#EvidenceType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGreenwashingStatus"/>
+        <Class IRI="#Greenwashing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGreenwashingStatus"/>
+        <Class IRI="#NotGreenwashing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasJudgment"/>
+        <Class IRI="#Judgment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#lacksEvidence"/>
+        <Class IRI="#NoEvidence"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#supportedBy"/>
+        <Class IRI="#CounterEvidence"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#supportedBy"/>
+        <Class IRI="#SupportiveEvidence"/>
+    </ObjectPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>If a claim is contradicted by valid counter evidence -&gt; it’s misleading.</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Claim"/>
+                <Variable IRI="/c"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#CounterEvidence"/>
+                <Variable IRI="/e"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#contradictedBy"/>
+                <Variable IRI="/c"/>
+                <Variable IRI="/e"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasJudgment"/>
+                <Variable IRI="/c"/>
+                <NamedIndividual IRI="#misleadingJudgment"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>claim supported by counter evidence -&gt; credible</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S7</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Claim"/>
+                <Variable IRI="/c"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#CounterEvidence"/>
+                <Variable IRI="/e"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#supportedBy"/>
+                <Variable IRI="/c"/>
+                <Variable IRI="/e"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Credible"/>
+                <Variable IRI="/c"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>If the claim lacks evidence -&gt; unsupported.</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S3</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Claim"/>
+                <Variable IRI="/c"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#NoEvidence"/>
+                <Variable IRI="/e"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#lacksEvidence"/>
+                <Variable IRI="/c"/>
+                <Variable IRI="/e"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Unsupported"/>
+                <Variable IRI="/c"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>If evidence supports the claim -&gt; credible</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S2</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Claim"/>
+                <Variable IRI="/c"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#SupportiveEvidence"/>
+                <Variable IRI="/e"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#supportedBy"/>
+                <Variable IRI="/c"/>
+                <Variable IRI="/e"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Credible"/>
+                <Variable IRI="/c"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>if claim credible -&gt; not greenwashing</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S6</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Credible"/>
+                <Variable IRI="/c"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#NotGreenwashing"/>
+                <Variable IRI="/c"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>if claim false -&gt; greenwashing</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S5</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#False"/>
+                <Variable IRI="/c"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Greenwashing"/>
+                <Variable IRI="/c"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>if claim misleading -&gt; greenwashing</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S4</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Misleading"/>
+                <Variable IRI="/c"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Greenwashing"/>
+                <Variable IRI="/c"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
